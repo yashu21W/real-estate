@@ -3,11 +3,12 @@ import Cta from "../components/Cta";
 import Wrapper from "../components/Wrapper";
 import { SEO } from "../components";
 import { NewestProperties, PropertiesForRent, PropertiesForSale } from "../container/home";
+import ChatbotFloatingButton from '../components/Chatbot/ChatbotFloatingButton';
 
 const Home = () => {
   return (
     <>
-    <SEO title='Realo'/>
+      <SEO title='Realo' />
       <Wrapper>
         <section className="w-full h-full flex flex-col">
           <section className="w-full h-full md:h-[500px] xl:h-[700px] bg-dark-1 flex flex-col-reverse md:flex-row items-center justify-center gap-5 py-10 md:py-0">
@@ -43,30 +44,32 @@ const Home = () => {
             </figure>
           </section>
           <section className="w-full h-full bg-dark-2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 p-5 rounded-lg">
-             <div className="border border-dark-3 hover:bg-dark-1 transition rounded-lg flex flex-col items-center justify-center gap-4 p-5">
-              <img src="/home.png" alt="home" loading="lazy" className="size-16 object-cover"/>
+            <div className="border border-dark-3 hover:bg-dark-1 transition rounded-lg flex flex-col items-center justify-center gap-4 p-5">
+              <img src="/home.png" alt="home" loading="lazy" className="size-16 object-cover" />
               <h4 className="font-medium text-base text-white text-center">Find Your Dream Home</h4>
-             </div>
-             <div className="border border-dark-3 hover:bg-dark-1 transition rounded-lg flex flex-col items-center justify-center gap-4 p-5">
-              <img src="/value.png" alt="value" loading="lazy" className="size-16 object-cover"/>
+            </div>
+            <div className="border border-dark-3 hover:bg-dark-1 transition rounded-lg flex flex-col items-center justify-center gap-4 p-5">
+              <img src="/value.png" alt="value" loading="lazy" className="size-16 object-cover" />
               <h4 className="font-medium text-base text-white text-center">Unlock Property Value</h4>
-             </div>
-             <div className="border border-dark-3 hover:bg-dark-1 transition rounded-lg flex flex-col items-center justify-center gap-4 p-5">
-              <img src="/property.png" alt="property" loading="lazy" className="size-16 object-cover"/>
+            </div>
+            <div className="border border-dark-3 hover:bg-dark-1 transition rounded-lg flex flex-col items-center justify-center gap-4 p-5">
+              <img src="/property.png" alt="property" loading="lazy" className="size-16 object-cover" />
               <h4 className="font-medium text-base text-white text-center">Effortless Property Management</h4>
-             </div>
-             <div className="border border-dark-3 hover:bg-dark-1 transition rounded-lg flex flex-col items-center justify-center gap-4 p-5">
-              <img src="/invest.png" alt="invest" loading="lazy" className="size-16 object-cover"/>
+            </div>
+            <div className="border border-dark-3 hover:bg-dark-1 transition rounded-lg flex flex-col items-center justify-center gap-4 p-5">
+              <img src="/invest.png" alt="invest" loading="lazy" className="size-16 object-cover" />
               <h4 className="font-medium text-base text-white text-center">Smart Investments, Informed Decisions</h4>
-             </div>
-             
+            </div>
+
           </section>
-          <NewestProperties/>
-           <PropertiesForRent/>
-           <PropertiesForSale/>
+          <NewestProperties />
+          <PropertiesForRent />
+          <PropertiesForSale />
           <Cta />
         </section>
       </Wrapper>
+      <ChatbotFloatingButton />
+
     </>
   );
 };
@@ -80,5 +83,6 @@ const Card = ({ title, description }) => (
     <p className="text-lg text-gray-2 font-medium capitalize whitespace-nowrap">
       {description}
     </p>
+
   </div>
 );

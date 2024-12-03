@@ -8,7 +8,7 @@ import propertyRouter from './routes/property.routes.js'
 import path from 'path'
 
 dotenv.config()
-
+console.log(process.env.MONOGODB_URL);
 mongoose.connect(process.env.MONOGODB_URL).then(() => {
     console.log("Connected to MongoDB")
 }).catch(() => {
